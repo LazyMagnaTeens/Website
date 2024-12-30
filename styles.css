@@ -97,12 +97,42 @@ nav ul li a.active {
 
 /* Section Heading */
 #game-project h2 {
-    font-size: 3em; /* Larger heading for better visibility */
+    font-size: 3.5em; /* Make the heading bigger */
     color: #343a40;
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Reduced bottom margin to keep space tight */
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: left; /* Align to the left */
 }
+
+#about h2 {
+    font-size: 3em; /* Make the heading bigger */
+    color: #343a40;
+    margin-bottom: 20px; /* Reduced bottom margin */
+    text-align: left; /* Align to the left */
+}
+
+/* Services Section Heading */
+#services h2 {
+    font-size: 3em; /* Make the heading bigger */
+    color: #343a40;
+    margin-bottom: 20px; /* Reduced bottom margin */
+    text-align: left; /* Align to the left */
+}
+
+/* Contact Section Heading */
+#contact h2 {
+    font-size: 3em; /* Make the heading bigger */
+    color: #343a40;
+    margin-bottom: 20px; /* Reduced bottom margin */
+    text-align: left; /* Align to the left */
+}
+
+/* Adjust margin-top for the headings to bring them to the top */
+section h2 {
+    margin-top: 0; /* Remove any top margin */
+}
+
 
 #game-project p {
     font-size: 1.3em; /* Increased font size */
