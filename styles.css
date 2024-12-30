@@ -1,3 +1,51 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for centering content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Fade-up Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Starts below the normal position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends at the normal position */
+    }
+}
+
+/* Apply fade-up animation to section content except for header and game-project section */
+section h2, section p {
+    animation: fadeUp 0.7s ease-out;
+}
+
+/* Remove the animation from the header */
+header h1 {
+    animation: none;
+}
+
+/* Remove the animation from the Game Project section */
+#game-project h2, #game-project p {
+    animation: none;
+}
+
 /* Game Project Section */
 #game-project {
     background-color: #f4f4f4; /* Matches the body background color */
@@ -44,4 +92,122 @@
 
 .download-btn:hover {
     background-color: #0056b3; /* Darker shade for hover */
+}
+
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+/* Optional: Style for the YouTube link */
+nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Contact Link */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .game-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
 }
