@@ -48,10 +48,10 @@ header h1 {
 
 /* Game Project Section */
 #game-project {
-    background-color: #FFFFFF;
-    color: gray;
+    background-color: #f4f4f4;
+    color: dark gray;
     padding: 40px 0;
-    text-align: left;
+    text-align: centre;
 }
 
 #game-project h2 {
@@ -61,10 +61,10 @@ header h1 {
 
 .game-info {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: centre;
+    align-items: centre;
     gap: 40px;
-    text-align: left;
+    text-align: centre;
 }
 
 .game-image {
