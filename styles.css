@@ -51,10 +51,11 @@ header h1 {
 header {
     background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10;
 }
 
 /* Header Logo */
@@ -70,11 +71,12 @@ header .logo {
 
 /* Header Title */
 header h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds dimension */
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 /* Navigation */
@@ -98,7 +100,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -121,45 +123,60 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
 /* Game Project Section */
 #game-project {
     background-color: #e9ecef;
-    padding: 40px 0;
+    padding: 60px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
+/* Section Heading */
 #game-project h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #343a40;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #game-project p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #495057;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
+/* Game Info */
 .game-info {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.game-image {
-    max-width: 80%;
+.game-info .game-image {
+    max-width: 400px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.game-info .game-text {
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.2em;
 }
 
 .download-btn {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 25px;
+    font-size: 1.1em;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .download-btn:hover {
@@ -173,7 +190,8 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
 
 /* Main Content */
 main {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-color: #ffffff;
 }
 
 section {
@@ -182,7 +200,7 @@ section {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
 }
@@ -214,13 +232,12 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
-    nav ul li {
-        display: block;
-        text-align: center;
-        margin: 10px 0;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .container {
@@ -232,8 +249,16 @@ a:hover {
         text-align: center;
     }
 
-    .game-image {
+    .game-info .game-image {
         max-width: 80%;
-        margin-bottom: 20px;
+    }
+
+    .game-info .game-text {
+        text-align: center;
+    }
+
+    .download-btn {
+        width: 100%;
+        padding: 15px;
     }
 }
