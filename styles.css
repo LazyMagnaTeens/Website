@@ -7,239 +7,147 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa; /* Softer background for a professional look */
     color: #333;
+    line-height: 1.6;
 }
 
-/* Container for centering content */
+/* Container */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
 
-/* Fade-up Animation */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Starts below the normal position */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Ends at the normal position */
-    }
-}
-
-/* Apply fade-up animation to section content except for header and game-project section */
-section h2, section p {
-    animation: fadeUp 0.7s ease-out;
-}
-
-/* Remove the animation from the header */
-header h1 {
-    animation: none;
-}
-
-/* Game Project Section */
-#game-project {
-    background-color: #e9ecef; /* Slightly different from body */
-    padding: 40px 0;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-#game-project h2 {
-    font-size: 2em;
-    color: #343a40; /* Slightly darker for better contrast */
-    margin-bottom: 20px;
-}
-
-#game-project p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #495057; /* Slightly lighter for distinction */
-}
-
-.game-info {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
+/* Grid Layout */
+.grid {
+    display: grid;
     gap: 20px;
 }
 
-.game-image {
-    max-width: 80%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.download-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-btn:hover {
-    background-color: #0056b3;
-}
-
-.download-btn:focus {
-    outline: 2px solid #0056b3;
-    outline-offset: 2px;
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for a modern look */
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
-    position: relative; /* For positioning inner elements like logo */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #0056b3;
 }
 
-/* Header Logo */
-header .logo {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-}
-
-/* Header Title */
 header h1 {
     font-size: 3em;
     font-family: 'Arial Black', sans-serif;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds dimension to the text */
-    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
 
-/* Navigation Bar */
-nav {
-    margin-top: 10px;
-}
-
+/* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 nav ul li {
-    position: relative;
+    list-style: none;
 }
 
 nav ul li a {
     color: white;
-    text-decoration: none;
     font-size: 1.2em;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Highlighting Active Page */
-nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.3);
-    font-weight: bold;
-}
-
-
-nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-/* Main Content */
-main {
-    padding: 40px 0;
-}
-
+/* Section Styling */
 section {
-    padding: 40px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-h2 {
-    font-size: 2em;
-    color: #333;
+section h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #343a40;
 }
 
-p {
+section p {
     font-size: 1.2em;
-    line-height: 1.6;
+    color: #495057;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Cards */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Link */
-a {
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+.btn:hover {
+    background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
+    font-size: 0.9em;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
-    nav ul li {
-        display: block;
-        text-align: center;
-        margin: 10px 0;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .container {
-        width: 90%;
-    }
-
-    .game-info {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .game-image {
-        max-width: 80%;
-        margin-bottom: 20px;
+        width: 95%;
     }
 }
