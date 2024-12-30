@@ -41,47 +41,42 @@ header h1 {
     animation: none;
 }
 
-/* Remove the animation from the Game Project section */
-#game-project h2, #game-project p {
-    animation: none;
-}
-
 /* Game Project Section */
 #game-project {
-    background-color: #f4f4f4; /* Matches the body background color */
+    background-color: #e9ecef; /* Slightly different from body */
     padding: 40px 0;
     text-align: center;
-    border-bottom: 1px solid #ddd; /* Adds a border for consistency */
+    border-bottom: 1px solid #ddd;
 }
 
 #game-project h2 {
-    font-size: 2em; /* Matches the other section titles */
-    color: #333; /* Matches other section headers */
+    font-size: 2em;
+    color: #343a40; /* Slightly darker for better contrast */
     margin-bottom: 20px;
 }
 
 #game-project p {
-    font-size: 1.2em; /* Consistent with paragraph styles */
-    line-height: 1.6; /* Consistent with paragraph spacing */
-    color: #333; /* Matches other section text color */
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #495057; /* Slightly lighter for distinction */
 }
 
 .game-info {
     display: flex;
-    flex-direction: column; /* Adjust for vertical alignment like other sections */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
 }
 
 .game-image {
-    max-width: 80%; /* Makes it responsive like other sections */
+    max-width: 80%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
 .download-btn {
-    background-color: #007bff; /* Matches the header link colors */
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     font-size: 1em;
@@ -91,9 +86,13 @@ header h1 {
 }
 
 .download-btn:hover {
-    background-color: #0056b3; /* Darker shade for hover */
+    background-color: #0056b3;
 }
 
+.download-btn:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
 
 /* Header */
 header {
@@ -121,15 +120,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    transform: scale(1.2); /* Increase size on hover */
+    transform: scale(1.1); /* Reduced scale to avoid layout shifting */
 }
 
-/* Optional: Style for the YouTube link */
 nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
     color: #FFFFFF;
     font-weight: bold;
