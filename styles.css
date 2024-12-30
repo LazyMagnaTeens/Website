@@ -31,9 +31,19 @@ body {
     }
 }
 
-/* Apply fade-up animation to header and section content */
+/* Apply fade-up animation to section content except for header and game-project section */
 header h1, section h2, section p {
     animation: fadeUp 1s ease-out;
+}
+
+/* Remove the animation from the header */
+header h1 {
+    animation: none;
+}
+
+/* Remove the animation from the Game Project section */
+#game-project h2, #game-project p {
+    animation: none;
 }
 
 /* Game Project Section */
