@@ -11,7 +11,7 @@ body {
     background-color: #f9f9f9; /* Soft light background */
     color: #333;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 17px; /* Slightly larger font for better readability */
 }
 
 /* Container */
@@ -26,7 +26,7 @@ body {
 header {
     background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
-    padding: 60px 20px; /* Increase padding for more visual space */
+    padding: 80px 20px; /* Increased padding for better visual balance */
     text-align: center;
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -35,11 +35,11 @@ header {
 
 /* Header Title */
 header h1 {
-    font-size: 3.2em; /* Reduced size for better proportions */
+    font-size: 3.5em; /* Increased size for better emphasis */
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
@@ -63,8 +63,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 10px 18px;
+    font-size: 1.2em; /* Slightly larger font for nav items */
+    padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -82,7 +82,7 @@ nav ul li a.active {
 /* Game Project Section */
 #game-project {
     background-color: #e9ecef;
-    padding: 60px 20px;
+    padding: 80px 20px; /* More padding for visual space */
     text-align: center;
     border-bottom: 1px solid #ddd;
     position: relative;
@@ -90,18 +90,18 @@ nav ul li a.active {
 
 /* Section Heading */
 #game-project h2 {
-    font-size: 2.8em;
+    font-size: 3em; /* Larger heading for better visibility */
     color: #343a40;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 #game-project p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.3em; /* Increased font size */
+    line-height: 1.7;
     color: #495057;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -111,21 +111,21 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px;
     flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
 .game-info .game-image {
-    max-width: 450px;
+    max-width: 480px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .game-info .game-text {
-    max-width: 600px;
+    max-width: 650px;
     text-align: left;
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.3em;
+    line-height: 1.7;
     color: #495057;
 }
 
@@ -133,8 +133,8 @@ nav ul li a.active {
 .download-btn {
     background-color: #007bff;
     color: white;
-    padding: 15px 25px;
-    font-size: 1.2em;
+    padding: 18px 30px;
+    font-size: 1.3em; /* Larger button text */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -152,12 +152,13 @@ nav ul li a.active {
 
 /* Main Content */
 main {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #ffffff;
 }
 
+/* Section */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px; /* Increase padding for a spacious feel */
     border-bottom: 1px solid #ddd;
 }
 
@@ -165,7 +166,7 @@ section {
 footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -183,7 +184,7 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5em; /* Smaller header size for mobile */
+        font-size: 2.8em; /* Smaller header size for mobile */
     }
 
     nav ul {
