@@ -7,15 +7,15 @@
 
 /* Body */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f8f9fa; /* Softer background for a professional look */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
 /* Container */
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -23,131 +23,217 @@ body {
 /* Grid Layout */
 .grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Fade-up Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+section h2, section p {
+    animation: fadeUp 0.7s ease-out;
+}
+
+header h1 {
+    animation: none;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 5px solid #0056b3;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Header Logo */
+header .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Header Title */
 header h1 {
     font-size: 3em;
     font-family: 'Arial Black', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds dimension */
+    margin-bottom: 5px;
 }
 
 /* Navigation */
+nav {
+    margin-top: 10px;
+}
+
 nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 nav ul li {
-    list-style: none;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-/* Section Styling */
-section {
-    padding: 60px 0;
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Game Project Section */
+#game-project {
+    background-color: #e9ecef;
+    padding: 40px 0;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
 }
 
-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+#game-project h2 {
+    font-size: 2em;
     color: #343a40;
+    margin-bottom: 20px;
 }
 
-section p {
+#game-project p {
     font-size: 1.2em;
+    line-height: 1.6;
     color: #495057;
 }
 
-/* Cards */
-.card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 20px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.game-image {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
+.download-btn {
     background-color: #007bff;
-    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
     text-decoration: none;
-    font-size: 1.1em;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.download-btn:hover {
     background-color: #0056b3;
+}
+
+.download-btn:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
-    font-size: 0.9em;
 }
 
-/* Responsive */
+/* Contact Link */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
     }
 
     .container {
-        width: 95%;
+        width: 90%;
+    }
+
+    .game-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image {
+        max-width: 80%;
+        margin-bottom: 20px;
     }
 }
