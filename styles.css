@@ -70,6 +70,12 @@ nav ul li a:hover {
     transform: scale(1.2); /* Increase size on hover */
 }
 
+/* Optional: Style for the YouTube link */
+nav ul li a[href*="youtube.com"] {
+    color: #FF0000; /* YouTube Red */
+    font-weight: bold;
+}
+
 /* Main Content */
 main {
     padding: 40px 0;
