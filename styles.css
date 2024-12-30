@@ -48,10 +48,10 @@ header h1 {
 
 /* Game Project Section */
 #game-project {
-    background-color: #007bff;
+    background-color: #FFFFFF;
     color: white;
     padding: 40px 0;
-    text-align: center;
+    text-align: left;
 }
 
 #game-project h2 {
