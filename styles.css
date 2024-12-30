@@ -19,6 +19,23 @@ body {
     max-width: 1200px;
 }
 
+/* Fade-up Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Starts below the normal position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends at the normal position */
+    }
+}
+
+/* Apply fade-up animation to header and section content */
+header h1, section h2, section p {
+    animation: fadeUp 1s ease-out;
+}
+
 /* Header */
 header {
     background-color: #007bff;
