@@ -49,7 +49,7 @@ header h1 {
 /* Game Project Section */
 #game-project {
     background-color: #FFFFFF;
-    color: white;
+    color: gray;
     padding: 40px 0;
     text-align: left;
 }
@@ -61,8 +61,8 @@ header h1 {
 
 .game-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     gap: 40px;
     text-align: left;
 }
@@ -128,7 +128,7 @@ nav ul li a:hover {
 
 /* Optional: Style for the YouTube link */
 nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
-    color: #FFFFFF; /* YouTube Red */
+    color: #FFFFFF;
     font-weight: bold;
 }
 
