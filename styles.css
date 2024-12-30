@@ -74,7 +74,9 @@ header h1 {
 
 .game-description {
     max-width: 600px;
+    padding-bottom: 20px; /* Adds space below all content in the description */
 }
+
 
 .download-btn {
     background-color: #FF0000;
