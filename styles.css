@@ -115,8 +115,8 @@ nav ul li a.active {
 /* Game Info */
 .game-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     gap: 40px;
     margin-top: 40px;
     flex-wrap: wrap; /* Allow items to wrap on small screens */
