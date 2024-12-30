@@ -7,81 +7,45 @@
 
 /* Body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Soft light background */
     color: #333;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 /* Container */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-/* Grid Layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Fade-up Animation */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section h2, section p {
-    animation: fadeUp 0.7s ease-out;
-}
-
-header h1 {
-    animation: none;
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px;
 }
 
 /* Header */
 header {
     background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
-    padding: 40px 0;
+    padding: 60px 20px; /* Increase padding for more visual space */
     text-align: center;
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     z-index: 10;
 }
 
-/* Header Logo */
-header .logo {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-}
-
 /* Header Title */
 header h1 {
-    font-size: 3.5em;
+    font-size: 3.2em; /* Reduced size for better proportions */
     font-family: 'Arial Black', sans-serif;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds dimension */
-    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 /* Navigation */
 nav {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 nav ul {
@@ -89,7 +53,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li {
@@ -99,8 +63,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 8px 15px;
+    font-size: 1.1em;
+    padding: 10px 18px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -115,15 +79,10 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
 /* Game Project Section */
 #game-project {
     background-color: #e9ecef;
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     position: relative;
@@ -131,7 +90,7 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
 
 /* Section Heading */
 #game-project h2 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #343a40;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -142,22 +101,22 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
     font-size: 1.2em;
     line-height: 1.6;
     color: #495057;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 /* Game Info */
 .game-info {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     margin-top: 30px;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
 }
 
 .game-info .game-image {
-    max-width: 400px;
+    max-width: 450px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -166,17 +125,20 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
     max-width: 600px;
     text-align: left;
     font-size: 1.2em;
+    line-height: 1.6;
+    color: #495057;
 }
 
+/* Download Button */
 .download-btn {
     background-color: #007bff;
     color: white;
     padding: 15px 25px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .download-btn:hover {
@@ -190,24 +152,13 @@ nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
 
 /* Main Content */
 main {
-    padding: 60px 0;
+    padding: 60px 20px;
     background-color: #ffffff;
 }
 
 section {
-    padding: 40px 0;
+    padding: 60px 20px;
     border-bottom: 1px solid #ddd;
-}
-
-h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
 }
 
 /* Footer */
@@ -232,7 +183,7 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Smaller header size for mobile */
     }
 
     nav ul {
@@ -241,7 +192,8 @@ a:hover {
     }
 
     .container {
-        width: 90%;
+        width: 100%;
+        padding: 0 15px;
     }
 
     .game-info {
@@ -251,10 +203,12 @@ a:hover {
 
     .game-info .game-image {
         max-width: 80%;
+        margin-bottom: 20px;
     }
 
     .game-info .game-text {
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .download-btn {
