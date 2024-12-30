@@ -116,7 +116,7 @@ nav ul li a:hover {
 
 /* Optional: Style for the YouTube link */
 nav ul li a[href*="https://www.youtube.com/@MagnaTeens"] {
-    color: #FF0000; /* YouTube Red */
+    color: #FFFFFF; /* YouTube Red */
     font-weight: bold;
 }
 
