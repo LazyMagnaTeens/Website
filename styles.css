@@ -36,7 +36,7 @@ header h1, section h2, section p {
     animation: fadeUp 1s ease-out;
 }
 
-/* Game Project Section */
+/* Game Project Section - Placed at the top */
 #game-project {
     background-color: #007bff;
     color: white;
