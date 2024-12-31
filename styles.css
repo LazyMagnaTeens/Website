@@ -169,15 +169,15 @@ nav ul li a.active {
     margin-left: auto; /* Pushes the content fully to the right */
 }
 
-#about-my-work .image {
-    width: 35%; /* Adjust the width as needed */
-    max-width: 100%; /* Prevents image from exceeding the container's width */
-    height: auto; /* Ensures height adjusts proportionally */
-    object-fit: contain; /* Ensures the image fits within the container without distortion */
+
+#about-my-work .image img {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits without distortion */
 }
 
 
-/* About My Work Section */
+
 #about-my-work {
     display: flex;
     flex-direction: row-reverse; /* Aligns text on the right and image on the left */
@@ -191,13 +191,6 @@ nav ul li a.active {
     text-align: left; /* Keeps the text aligned to the left */
 }
 
-#about-my-work .image {
-    width: 10%; /* Sets the image width to 35% */
-    height: 100%; /* Automatically adjusts the height to maintain the aspect ratio */
-    max-height: 10%; /* Ensures the image doesn't exceed the height of its container */
-    object-fit: cover; /* Ensures the image covers the container proportionally */
-    max-width: 60%; /* Ensures the image doesn't exceed the container's width */
-}
 
 
 
