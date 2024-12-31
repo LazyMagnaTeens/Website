@@ -6,31 +6,12 @@
     <title>Alien Wars Website</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9; /* Soft light background */
-            color: #333;
-            line-height: 1.6;
-            font-size: 17px; /* Slightly larger font for better readability */
-        }
-
-        /* Container */
+        /* Layout Styles */
         .container {
-            width: 100%;
-            max-width: 1200px; /* Constrain the width */
-            margin: 0 auto; /* Center the container */
-            padding: 0 15px;
+            width: 90%;
+            margin: 0 auto;
         }
 
-        /* Section Styles */
         section {
             padding: 50px 0;
         }
@@ -38,9 +19,9 @@
         /* About My Work Section */
         #about-my-work {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            flex-direction: row; /* Text on the left, image on the right */
         }
 
         #about-my-work .text {
@@ -49,22 +30,14 @@
 
         #about-my-work .image {
             width: 35%;
-            text-align: right;
-        }
-
-        #about-my-work .image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         /* About Me Section */
         #about-me {
             display: flex;
+            flex-direction: row-reverse;
             align-items: center;
             justify-content: space-between;
-            flex-direction: row-reverse; /* Text on the right, image on the left */
         }
 
         #about-me .text {
@@ -73,58 +46,80 @@
 
         #about-me .image {
             width: 35%;
-            text-align: left;
-        }
-
-        #about-me .image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         /* My Services Section */
         #my-services {
             display: flex;
-            justify-content: flex-start; /* Aligns text to the left */
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
 
         #my-services .text {
-            width: 100%;
+            width: 60%;
         }
 
-        #my-services ul {
-            list-style-type: none;
-            padding: 0;
+        #my-services .image {
+            width: 35%;
         }
 
-        #my-services ul li {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        /* Fade Text Animation */
-        .fade-text {
-            opacity: 0;
-            transform: translateY(20px); 
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-text.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 0;
+        /* Contact Me Section */
+        #contact {
+            font-size: 0.9rem;
             text-align: center;
+        }
+
+        /* Make video fit the entire introduction section */
+        #introduction .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #introduction video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
+    <!-- Game Project Section -->
+    <section id="game-project">
+    <div class="container">
+        <h2>Alien Wars - The Game</h2>
+        <div class="game-info">
+            <img src="Asteroid.png" alt="Alien Wars Game Animation" class="game-image">
+            <div class="game-description">
+                <p class="fade-text">
+                    Alien Wars is an action-packed game where you control a spaceship to defend Earth from alien invaders. This game was coded in Python. The goal is to protect the planet by maintaining a high streak and earning the best score possible. Join the fight now!
+                </p>
+                <a href="https://drive.google.com/uc?export=download&id=19gpn_r_dLv5mRgC11pW1xqG-x-1gxzwK" class="download-btn fade-text" target="_blank">Download Alien Wars</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>Learn more about Alien Wars through this video introduction. It covers gameplay mechanics, story, and what makes it unique!</p>
+            <div class="video-container">
+    <iframe 
+        src="https://drive.google.com/file/d/1gDgxKjQJAww5nbsakAAD3IzyvVCIIpqD/preview" 
+        width="100%" 
+        height="480" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+        </div>
+    </section>
+
     <!-- About My Work Section -->
     <section id="about-my-work">
         <div class="container">
@@ -141,12 +136,12 @@
     <!-- About Me Section -->
     <section id="about-me">
         <div class="container">
-            <div class="image fade-text">
-                <img src="about-me-image.jpg" alt="About me image">
-            </div>
             <div class="text fade-text">
                 <h2>About Me</h2>
                 <p>I enjoy coding new things and showcasing them to improve my skills. Recently, I started a YouTube channel with my friends, where we share our projects and adventures. I am passionate about game development, coding, and creating engaging content for others to enjoy.</p>
+            </div>
+            <div class="image fade-text">
+                <img src="about-me-image.jpg" alt="About me image">
             </div>
         </div>
     </section>
@@ -163,6 +158,19 @@
                     <li>Business Strategy</li>
                 </ul>
             </div>
+            <div class="image fade-text">
+                <img src="services-image.jpg" alt="My services image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="fade-text">Contact Me</h2>
+            <p class="fade-text">If you're interested in my services or want to learn more, feel free to contact me. I am available through email or Discord. If I don’t respond immediately, I might be busy, but I will get back to you as soon as possible!</p>
+            <a href="mailto:youremail@example.com" class="fade-text">Email me</a>
+            <a href="mailto:youremail@example.com" class="fade-text">Discord</a>
         </div>
     </section>
 
@@ -172,6 +180,8 @@
             <p class="fade-text">&copy; 2024 Alien Wars Website by Lazy. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
     <script>
         // Create a new Intersection Observer
