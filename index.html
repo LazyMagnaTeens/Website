@@ -154,12 +154,14 @@
 <!-- About My Work Section -->
 
 <section id="about-my-work">
-    <div class="text">
-        <h2>About My Work</h2>
-        <p>Your text goes here...</p>
-    </div>
-    <div class="image">
-        <img src="your-image-url.jpg" alt="Description of image">
+    <div class="container">
+        <div class="text fade-text">
+            <h2>About My Work</h2>
+            <p>Alien Wars is a game coded in Python. The game allows players to maneuver a spaceship as they defend Earth from invaders. It's a project that combines coding skills, game design, and creativity. I developed this game as a fun way to challenge players and develop my programming knowledge.</p>
+        </div>
+        <div class="image fade-text">
+            <img src="PythonCode.png" alt="About my work image">
+        </div>
     </div>
 </section>
 
@@ -196,50 +198,3 @@
         </div>
     </div>
 </section>
-
-
-    <!-- Contact Me Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="fade-text">Contact Me</h2>
-            <p class="fade-text">If you're interested in my services or want to learn more, feel free to contact me. I am available through email or Discord. If I don’t respond immediately, I might be busy, but I will get back to you as soon as possible!</p>
-            <a href="mailto:youremail@example.com" class="fade-text">Email me</a>
-            <a href="mailto:youremail@example.com" class="fade-text">Discord</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="fade-text">&copy; 2024 Alien Wars Website by Lazy. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
-    <script>
-        // Create a new Intersection Observer
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add the 'visible' class to the element when it enters the viewport
-                    entry.target.classList.add('visible');
-                } else {
-                    // Remove the 'visible' class when the element leaves the viewport
-                    entry.target.classList.remove('visible');
-                }
-            });
-        }, {
-            threshold: 0.5 // Trigger when 50% of the element is visible
-        });
-
-        // Select all elements you want to apply the fade effect to
-        const fadeElements = document.querySelectorAll('.fade-text');
-
-        // Observe each fade-in element
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
-</body>
-</html>
