@@ -155,6 +155,23 @@ nav ul li a.active {
     margin-top: 25px;
 }
 
+#about-me {
+    display: flex;
+    flex-direction: row-reverse; /* Keeps text on the right */
+    align-items: center;
+    justify-content: flex-end; /* Ensures text aligns perfectly to the right */
+}
+
+#about-me .text {
+    width: 60%;
+    text-align: right; /* Aligns the text to the right */
+}
+
+#about-me .image {
+    width: 35%;
+}
+
+
 /* Footer */
 footer {
     background-color: #333;
