@@ -187,6 +187,7 @@ nav ul li a.active {
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Ensure space between text and image */
     gap: 20px; /* Space between text and image */
+    padding: 20px 0; /* Padding for cleaner spacing */
 }
 
 #about-my-work .text {
@@ -203,6 +204,7 @@ nav ul li a.active {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image is not distorted */
 }
+
 
 /* My Services Section */
 #my-services {
