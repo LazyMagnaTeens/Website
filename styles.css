@@ -186,9 +186,15 @@ nav ul li a.active {
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Vertically center the content */
     justify-content: flex-start; /* Align the content to the left */
-    gap: 20px; /* Space between text and image */
-    border-bottom: 2px solid #333; /* Border between About My Work and About Me */
-    padding-bottom: 20px;
+    width: 100%; /* Ensure the section takes up the full width of the page */
+    position: relative;
+}
+
+#about-my-work .container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; /* Align the entire container content to the right */
+    padding-right: 20px; /* Add some padding to the right for spacing */
 }
 
 #about-my-work .text {
@@ -205,6 +211,13 @@ nav ul li a.active {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image is not distorted */
 }
+
+/* Optional: Padding between sections for a cleaner look */
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 
 /* Optional: Padding between sections for a cleaner look */
 section {
