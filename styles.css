@@ -155,19 +155,30 @@ nav ul li a.active {
     margin-top: 25px;
 }
 
+/* About Me Section */
 #about-me {
-    display: flex;
-    flex-direction: row-reverse; /* Keeps the text on the right side */
-    align-items: center;
-    justify-content: flex-start; /* Ensures the content aligns to the left, pushing it to the right */
-    width: 100%; /* Makes sure the container takes the full width */
+    display: flex; /* Use flexbox to align the text and image side by side */
+    flex-direction: row-reverse; /* This places the image on the right and the text on the left */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensures space between text and image */
+    gap: 20px; /* Add space between the text and the image */
 }
 
 #about-me .text {
-    width: 60%;
-    text-align: right; /* Aligns the text to the right */
-    margin-left: auto; /* Pushes the content fully to the right */
+    width: 60%; /* Text takes up 60% of the container */
+    text-align: right; /* Align text to the right */
 }
+
+#about-me .image {
+    width: 35%; /* Image takes up 35% of the container */
+}
+
+#about-me .image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without distortion */
+}
+
 
 
 /* About My Work Section */
