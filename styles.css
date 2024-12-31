@@ -189,16 +189,16 @@ nav ul li a.active {
     display: flex; /* Use flexbox to align items horizontally */
     align-items: flex-start; /* Align items to the top */
     justify-content: flex-start; /* Align the items to the left */
-    gap: 20px; /* Space between text and image */
+    gap: 10px; /* Reduce space between text and image */
 }
 
 #about-my-work .text {
-    width: 60%; /* Text will take up 60% of the container */
+    width: 65%; /* Adjust width for text */
     text-align: left; /* Align text to the left */
 }
 
 #about-my-work .image {
-    width: 35%; /* Image will take up 35% of the container */
+    width: 30%; /* Adjust width for the image */
 }
 
 #about-my-work .image img {
