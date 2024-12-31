@@ -22,77 +22,64 @@ body {
     padding: 0 15px;
 }
 
-/* Section Styles */
-section {
-    padding: 50px 0;
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
+    color: white;
+    padding: 80px 20px; /* Increased padding for better visual balance */
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10;
 }
 
-/* About My Work Section */
-#about-my-work {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row; /* Text on the left, image on the right */
+/* Header Title */
+header h1 {
+    font-size: 3.5em;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-#about-my-work .text {
-    width: 60%;
+/* Navigation */
+nav {
+    margin-top: 20px;
 }
 
-#about-my-work .image {
-    width: 35%;
-    text-align: right;
-}
-
-#about-my-work .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* About Me Section */
-#about-me {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse; /* Text on the right, image on the left */
-}
-
-#about-me .text {
-    width: 60%;
-}
-
-#about-me .image {
-    width: 35%;
-    text-align: left;
-}
-
-#about-me .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* My Services Section */
-#my-services {
-    display: flex;
-    justify-content: flex-start; /* Aligns text to the left */
-}
-
-#my-services .text {
-    width: 100%;
-}
-
-#my-services ul {
+/* Use Flexbox for Navigation Layout */
+nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
-#my-services ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; 
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active Link */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
 }
 
 /* Fade Text Animation */
@@ -105,6 +92,67 @@ section {
 .fade-text.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Game Project Section */
+#game-project {
+    background-color: #e9ecef;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#game-project h2 {
+    font-size: 3.5em;
+    color: #343a40;
+    text-align: left;
+}
+
+#game-project p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    flex-direction: row-reverse; /* Places image on the left, text on the right */
+    justify-content: space-between; /* Adds space between elements */
+    align-items: center; /* Vertically centers content */
+    gap: 20px; /* Adjust space between image and text */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+}
+
+.game-info .game-image {
+    width: 40%; /* Adjust width for proper scaling */
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.game-info .game-description {
+    width: 55%; /* Adjust width for text */
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+}
+
+.download-btn {
+    display: inline-block; /* Ensures proper alignment */
+    background-color: #007bff;
+    color: white;
+    padding: 18px 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
 }
 
 /* Footer */
