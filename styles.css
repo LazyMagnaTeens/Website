@@ -157,19 +157,22 @@ nav ul li a.active {
 
 #about-me {
     display: flex;
-    flex-direction: row-reverse; /* Keeps text on the right */
+    flex-direction: row-reverse; /* Keeps the text on the right side */
     align-items: center;
-    justify-content: flex-end; /* Ensures text aligns perfectly to the right */
+    justify-content: flex-start; /* Ensures the content aligns to the left, pushing it to the right */
+    width: 100%; /* Makes sure the container takes the full width */
 }
 
 #about-me .text {
     width: 60%;
     text-align: right; /* Aligns the text to the right */
+    margin-left: auto; /* Pushes the content fully to the right */
 }
 
 #about-me .image {
     width: 35%;
 }
+
 
 
 /* Footer */
