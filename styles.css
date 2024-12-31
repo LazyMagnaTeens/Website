@@ -193,6 +193,30 @@ nav ul li a.active {
     object-fit: contain; /* Ensure the image is not distorted */
 }
 
+/* My Services Section */
+#my-services {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure space between text and image */
+    gap: 20px; /* Add some space between the text and image */
+}
+
+#my-services .text {
+    width: 60%; /* Text takes up 60% of the container */
+    text-align: left; /* Align text to the left */
+}
+
+#my-services .image {
+    width: 35%; /* Image takes up 35% of the container */
+}
+
+#my-services .image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image is not distorted */
+}
+
+
 
 /* Footer */
 footer {
