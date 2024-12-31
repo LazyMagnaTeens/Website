@@ -1,3 +1,160 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Soft light background */
+    color: #333;
+    line-height: 1.6;
+    font-size: 17px; /* Slightly larger font for better readability */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
+    color: white;
+    padding: 80px 20px; /* Increased padding for better visual balance */
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 3.5em;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+/* Use Flexbox for Navigation Layout */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; 
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active Link */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+/* Fade Text Animation */
+.fade-text {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Game Project Section */
+#game-project {
+    background-color: #e9ecef;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#game-project h2 {
+    font-size: 3.5em;
+    color: #343a40;
+    text-align: left;
+}
+
+#game-project p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    flex-direction: row-reverse; /* Places image on the left, text on the right */
+    justify-content: space-between; /* Adds space between elements */
+    align-items: center; /* Vertically centers content */
+    gap: 20px; /* Adjust space between image and text */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+}
+
+.game-info .game-image {
+    width: 40%; /* Adjust width for proper scaling */
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.game-info .game-description {
+    width: 55%; /* Adjust width for text */
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+}
+
+.download-btn {
+    display: inline-block; /* Ensures proper alignment */
+    background-color: #007bff;
+    color: white;
+    padding: 18px 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
 /* About Me Section */
 #about-me {
     display: flex; /* Flexbox layout */
@@ -30,8 +187,85 @@
     object-fit: contain; /* Ensure the image is not distorted */
 }
 
-/* Optional: Padding between sections for a cleaner look */
-section {
-    padding-top: 20px;
+/* About My Work Section */
+#about-my-work {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: flex-start; /* Align the content to the left */
+    width: 100%; /* Ensure the section takes up the full width of the page */
+    position: relative;
+}
+
+#about-my-work .container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; /* Align the entire container content to the right */
+    padding-right: 20px; /* Add some padding to the right for spacing */
+}
+
+#about-my-work .text {
+    width: 60%; /* Text will take up 60% of the container */
+    text-align: right; /* Align text to the right */
+}
+
+#about-my-work .image {
+    width: 35%; /* Image will take up 35% of the container */
+}
+
+#about-my-work .image img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image is not distorted */
+}
+
+/* My Services Section */
+#my-services {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure space between text and image */
+    gap: 20px; /* Add some space between the text and image */
+}
+
+#my-services .text {
+    width: 60%; /* Text takes up 60% of the container */
+    text-align: left; /* Align text to the left */
+}
+
+#my-services .image {
+    width: 35%; /* Image takes up 35% of the container */
+}
+
+#my-services .image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image is not distorted */
+}
+
+/* Add border between specific sections */
+#introduction {
+    border-bottom: 2px solid #333; /* Border between Introduction and About My Work */
+    padding-bottom: 20px; /* Padding to avoid text touching the border */
+}
+
+#about-my-work {
+    border-bottom: 2px solid #333; /* Border between About My Work and About Me */
     padding-bottom: 20px;
+}
+
+#about-me {
+    border-bottom: 2px solid #333; /* Border between About Me and My Services */
+    padding-bottom: 20px;
+}
+
+#my-services {
+    border-bottom: 2px solid #333; /* Border between My Services and Contact Me */
+    padding-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
 }
