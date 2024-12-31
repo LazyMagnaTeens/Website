@@ -7,106 +7,59 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Main Content -->
-    <main>
-        <section id="game-project">
-            <div class="container">
-                <h2 class="fade-text">Alien Wars - The Game</h2>
-                <div class="game-info">
-                    <img src="Asteroid.png" alt="Alien Wars Game Animation" class="game-image">
-                    <div class="game-description">
-                        <p class="fade-text">Alien Wars is an action-packed game where you control a spaceship to defend Earth from alien invaders. This game was coded in Python. The goal is to protect the planet by maintaining a high streak and earning the best score possible. Join the fight now!</p>
-                        <p class="fade-text"> ‎ </p> 
-                        <p class="fade-text"> ‎ </p> 
-                        <a href="https://drive.google.com/uc?export=download&id=19gpn_r_dLv5mRgC11pW1xqG-x-1gxzwK" class="download-btn fade-text" target="_blank">Download Alien Wars</a>
-                    </div>
+    <!-- Game Project Section -->
+    <section id="game-project">
+        <div class="container">
+            <h2 class="fade-text">Alien Wars - The Game</h2>
+            <div class="game-info">
+                <img src="Asteroid.png" alt="Alien Wars Game Animation" class="game-image">
+                <div class="game-description">
+                    <p class="fade-text">Alien Wars is an action-packed game where you control a spaceship to defend Earth from alien invaders. This game was coded in Python. The goal is to protect the planet by maintaining a high streak and earning the best score possible. Join the fight now!</p>
+                    <a href="https://drive.google.com/uc?export=download&id=19gpn_r_dLv5mRgC11pW1xqG-x-1gxzwK" class="download-btn fade-text" target="_blank">Download Alien Wars</a>
                 </div>
             </div>
-        </section>
-
-        <section id="home">
-            <div class="container">
-                <h2 class="fade-text">About My Work</h2>
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text">Alien Wars is a game coded in Python. The game allows players to maneuver a spaceship as they defend Earth from invaders...</p>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2 class="fade-text">About Me</h2>
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text">I like coding new things and also like to showcase them to grow and get better. Recently, I have started a YouTube channel with my friends...</p>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h2 class="fade-text">My Services</h2>
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p>
-                <ul>
-                    <li class="fade-text">Game Development</li>
-                    <li class="fade-text">Game Design</li>
-                    <li class="fade-text">Marketing</li>
-                    <li class="fade-text">Business</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="fade-text">Contact Me</h2>
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p>
-                <p class="fade-text">If you are interested in my services, feel free to contact me. I have plenty of accounts. If I might not answer, I'm busy.</p>
-                <p class="fade-text"> ‎ </p> 
-                <p class="fade-text"> ‎ </p> 
-                <a href="mailto:youremail@example.com" class="fade-text">Email me</a>
-                <a href="mailto:youremail@example.com" class="fade-text">Discord</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="fade-text">&copy; 2024 Alien Wars Website by Lazy. All rights reserved.</p>
         </div>
-    </footer>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <div class="container">
+            <h2 class="fade-text">Introduction</h2>
+            <p class="fade-text">Learn more about Alien Wars through this video introduction. It covers gameplay mechanics, story, and what makes it unique!</p>
+            <div class="video-container fade-text">
+                <video controls>
+                    <source src="introduction.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 
     <script>
-    // Create a new Intersection Observer
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add the 'visible' class to the element when it enters the viewport
-                entry.target.classList.add('visible');
-            } else {
-                // Remove the 'visible' class when the element leaves the viewport
-                entry.target.classList.remove('visible');
-            }
+        // Create a new Intersection Observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the 'visible' class to the element when it enters the viewport
+                    entry.target.classList.add('visible');
+                } else {
+                    // Remove the 'visible' class when the element leaves the viewport
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is visible
         });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the element is visible
-    });
 
-    // Select all elements you want to apply the fade effect to
-    const fadeElements = document.querySelectorAll('.fade-text');
-    
-    // Observe each fade-in element
-    fadeElements.forEach(element => {
-        observer.observe(element);
-    });
-</script>
+        // Select all elements you want to apply the fade effect to
+        const fadeElements = document.querySelectorAll('.fade-text');
 
+        // Observe each fade-in element
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>
