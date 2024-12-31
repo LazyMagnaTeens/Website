@@ -16,21 +16,27 @@
             padding: 50px 0;
         }
 
-        /* About My Work Section */
         #about-my-work {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure space between text and image */
+    gap: 20px; /* Space between text and image */
+}
 
-        #about-my-work .text {
-            width: 60%;
-        }
+#about-my-work .text {
+    width: 60%; /* Text will take up 60% of the container */
+    text-align: left; /* Align text to the left */
+}
 
-        #about-my-work .image {
-            width: 35%;
-        }
+#about-my-work .image {
+    width: 35%; /* Image will take up 35% of the container */
+}
+
+#about-my-work .image img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image is not distorted */
+}
 
         /* About Me Section */
         #about-me {
