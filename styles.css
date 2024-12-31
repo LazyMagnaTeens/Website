@@ -156,8 +156,6 @@ nav ul li a.active {
 }
 
 /* About Me Section */
-/* About Me Section */
-/* About Me Section */
 #about-me {
     display: flex; /* Flexbox layout */
     align-items: center; /* Vertically center the content */
@@ -189,16 +187,7 @@ nav ul li a.active {
     object-fit: contain; /* Ensure the image is not distorted */
 }
 
-/* Optional: Padding between sections for a cleaner look */
-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
-
 /* About My Work Section */
-
 #about-my-work {
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Vertically center the content */
@@ -228,21 +217,6 @@ section {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image is not distorted */
 }
-
-/* Optional: Padding between sections for a cleaner look */
-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
-/* Optional: Padding between sections for a cleaner look */
-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
 
 /* My Services Section */
 #my-services {
@@ -287,15 +261,6 @@ section {
     border-bottom: 2px solid #333; /* Border between My Services and Contact Me */
     padding-bottom: 20px;
 }
-
-/* Optional: Padding between sections for a cleaner look */
-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
-
 
 /* Footer */
 footer {
