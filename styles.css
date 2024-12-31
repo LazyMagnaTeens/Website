@@ -172,26 +172,27 @@ nav ul li a.active {
 
 /* About My Work Section */
 #about-my-work {
-    display: flex; /* Use flexbox to align elements side by side */
-    align-items: center; /* Vertically center the text and image */
-    justify-content: flex-start; /* Align the content at the start */
-    gap: 60px; /* Add some gap between the text and the image */
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Ensure space between text and image */
+    gap: 20px; /* Space between text and image */
 }
 
 #about-my-work .text {
-    width: 60%; /* Text takes up 60% of the container width */
-    text-align: left;
+    width: 60%; /* Text will take up 60% of the container */
+    text-align: left; /* Align text to the left */
 }
 
 #about-my-work .image {
-    width: 50%; /* Increase image width to 35% */
+    width: 35%; /* Image will take up 35% of the container */
 }
 
 #about-my-work .image img {
-    width: 100%; /* Image will fill the container’s width */
+    width: 100%; /* Make sure the image fills the container */
     height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image fits without distortion */
+    object-fit: contain; /* Ensure the image is not distorted */
 }
+
 
 /* Footer */
 footer {
