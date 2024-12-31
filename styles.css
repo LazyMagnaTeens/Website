@@ -170,25 +170,26 @@ nav ul li a.active {
 }
 
 
-#about-my-work .image img {
-    width: 100%; /* Make the image take up the full width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: contain; /* Ensure the image fits without distortion */
-}
-
-
-
 #about-my-work {
-    display: flex;
-    flex-direction: row-reverse; /* Aligns text on the right and image on the left */
-    align-items: flex-start; /* Ensures both the text and image align at the top */
-    justify-content: flex-start; /* Keeps the content aligned at the start */
-    width: 100%;
+    display: flex; /* Use flexbox to align elements side by side */
+    align-items: center; /* Vertically center the text and image */
+    justify-content: space-between; /* Ensures space between text and image */
+    gap: 20px; /* Add some gap between the text and the image */
 }
 
 #about-my-work .text {
-    width: 60%; /* Adjust the width of the text to take up 60% of the container */
-    text-align: left; /* Keeps the text aligned to the left */
+    width: 60%; /* Text takes up 60% of the container width */
+    text-align: left;
+}
+
+#about-my-work .image {
+    width: 35%; /* Image takes up 35% of the container width */
+}
+
+#about-my-work .image img {
+    width: 100%; /* Image will fill the container’s width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without distortion */
 }
 
 
