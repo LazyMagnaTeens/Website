@@ -169,9 +169,13 @@ nav ul li a.active {
     margin-left: auto; /* Pushes the content fully to the right */
 }
 
-#about-me .image {
-    width: 35%;
+#about-my-work .image {
+    width: 35%; /* Adjust the width as needed */
+    max-width: 100%; /* Prevents image from exceeding the container's width */
+    height: auto; /* Ensures height adjusts proportionally */
+    object-fit: contain; /* Ensures the image fits within the container without distortion */
 }
+
 
 /* About My Work Section */
 #about-my-work {
