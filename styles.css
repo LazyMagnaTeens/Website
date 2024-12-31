@@ -127,7 +127,7 @@ nav ul li a.active {
     font-size: 3em; /* Make the heading bigger */
     color: #343a40;
     margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: left; /* Align to the left */
+    text-align: right; /* Align to the right */
 }
 
 #about h2 {
@@ -142,7 +142,7 @@ nav ul li a.active {
     font-size: 3em; /* Make the heading bigger */
     color: #343a40;
     margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: left; /* Align to the left */
+    text-align: right; /* Align to the right */
 }
 
 /* Contact Section Heading */
