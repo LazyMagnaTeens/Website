@@ -170,10 +170,11 @@ nav ul li a.active {
 }
 
 
+/* About My Work Section */
 #about-my-work {
     display: flex; /* Use flexbox to align elements side by side */
     align-items: center; /* Vertically center the text and image */
-    justify-content: space-between; /* Ensures space between text and image */
+    justify-content: flex-start; /* Align the content at the start */
     gap: 20px; /* Add some gap between the text and the image */
 }
 
@@ -183,7 +184,7 @@ nav ul li a.active {
 }
 
 #about-my-work .image {
-    width: 35%; /* Image takes up 35% of the container width */
+    width: 35%; /* Increase image width to 35% */
 }
 
 #about-my-work .image img {
@@ -191,12 +192,6 @@ nav ul li a.active {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image fits without distortion */
 }
-
-
-
-
-
-
 
 /* Footer */
 footer {
