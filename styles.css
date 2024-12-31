@@ -1,294 +1,134 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9; /* Soft light background */
-    color: #333;
-    line-height: 1.6;
-    font-size: 17px; /* Slightly larger font for better readability */
-}
-
-/* Container */
-.container {
-    width: 100%;
-    max-width: 1200px; /* Constrain the width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 15px;
-}
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
-    color: white;
-    padding: 80px 20px; /* Increased padding for better visual balance */
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    z-index: 10;
-}
-
-/* Header Title */
-header h1 {
-    font-size: 3.5em; /* Increased size for better emphasis */
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* Navigation */
-nav {
-    margin-top: 20px;
-}
-
-/* Use Flexbox for Navigation Layout */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;  /* Space between links */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-}
-
-/* Each navigation item */
-nav ul li {
-    position: relative;
-    margin: 5px; /* Add margin to prevent links from sticking together */
-}
-
-/* Navigation link styling */
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em; /* Slightly larger font for nav items */
-    padding: 12px 20px; /* More padding for better touch targets */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-
-/* Text Fade */
-/* Initial state: text is hidden and slightly translated */
-.fade-text {
-    opacity: 0;
-    transform: translateY(20px); /* Starts 20px below its original position */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation */
-}
-
-/* When the element becomes visible */
-.fade-text.visible {
-    opacity: 1;
-    transform: translateY(0); /* Moves to original position */
-}
-
-
-
-/* Hover Effect */
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-/* Active link style */
-nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.3);
-    font-weight: bold;
-}
-
-/* Game Project Section */
-#game-project {
-    background-color: #e9ecef;
-    padding: 80px 20px; /* More padding for visual space */
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    position: relative;
-}
-
-/* Section Heading */
-#game-project h2 {
-    font-size: 3.5em; /* Make the heading bigger */
-    color: #343a40;
-    margin-bottom: 20px; /* Reduced bottom margin to keep space tight */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: left; /* Align to the left */
-}
-
-
-#home h2 {
-    font-size: 3em; /* Make the heading bigger */
-    color: #343a40;
-    margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: right; /* Align to the right */
-}
-
-#about h2 {
-    font-size: 3em; /* Make the heading bigger */
-    color: #343a40;
-    margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: left; /* Align to the left */
-}
-
-/* Services Section Heading */
-#services h2 {
-    font-size: 3em; /* Make the heading bigger */
-    color: #343a40;
-    margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: right; /* Align to the right */
-}
-
-/* Contact Section Heading */
-#contact h2 {
-    font-size: 3em; /* Make the heading bigger */
-    color: #343a40;
-    margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: left; /* Align to the left */
-}
-
-/* Adjust margin-top for the headings to bring them to the top */
-section h2 {
-    margin-top: 0; /* Remove any top margin */
-}
-
-
-#game-project p {
-    font-size: 1.3em; /* Increased font size */
-    line-height: 1.7;
-    color: #495057;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-/* Game Info */
-.game-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-}
-
-/* Game Image */
-.game-info .game-image {
-    max-width: 100%; /* Make sure the image doesn't exceed the container's width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 500px; /* Limit the height */
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Game Text */
-.game-info .game-description {
-    max-width: 650px;
-    text-align: left;
-    font-size: 1.3em;
-    line-height: 1.7;
-    color: #495057;
-}
-
-
-.game-info .game-text {
-    max-width: 650px;
-    text-align: left;
-    font-size: 1.3em;
-    line-height: 1.7;
-    color: #495057;
-}
-
-/* Download Button */
-.download-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 18px 30px;
-    font-size: 1.3em; /* Larger button text */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 25px;
-}
-
-.download-btn:hover {
-    background-color: #0056b3;
-}
-
-.download-btn:focus {
-    outline: 2px solid #0056b3;
-    outline-offset: 2px;
-}
-
-/* Main Content */
-main {
-    padding: 80px 20px;
-    background-color: #ffffff;
-}
-
-/* Section */
-section {
-    padding: 80px 20px; /* Increase padding for a spacious feel */
-    border-bottom: 1px solid #ddd;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-}
-
-/* Contact Link */
-a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.8em; /* Smaller header size for mobile */
+<style>
+    /* Reset some default styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px; /* Less space between vertical items */
+    /* General Layout */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
     }
 
     .container {
-        width: 100%;
-        padding: 0 15px;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    .game-info {
-        flex-direction: column;
-        text-align: center;
+    section {
+        padding: 50px 0;
     }
 
-    .game-info .game-image {
-        max-width: 80%;
+    h2 {
+        font-size: 2rem;
         margin-bottom: 20px;
     }
 
-    .game-info .game-text {
-        text-align: center;
-        margin-bottom: 20px;
+    /* Fade-in Effect */
+    .fade-text {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
     }
 
-    .download-btn {
-        width: 100%;
-        padding: 15px;
+    .fade-text.visible {
+        opacity: 1;
     }
-}
+
+    /* About My Work Section */
+    #about-my-work {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    #about-my-work .text {
+        width: 60%;
+    }
+
+    #about-my-work .image {
+        width: 35%;
+    }
+
+    /* About Me Section */
+    #about-me {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    #about-me .text {
+        width: 60%;
+    }
+
+    #about-me .image {
+        width: 35%;
+    }
+
+    /* My Services Section */
+    #my-services {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    #my-services .text {
+        width: 60%;
+    }
+
+    #my-services .image {
+        width: 35%;
+    }
+
+    /* Contact Me Section */
+    #contact {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Introduction Video */
+    #introduction .video-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-top: 20px;
+    }
+
+    #introduction video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #about-my-work, #about-me, #my-services {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about-my-work .text, #about-my-work .image,
+        #about-me .text, #about-me .image,
+        #my-services .text, #my-services .image {
+            width: 80%;
+        }
+
+        #about-my-work .image, #about-me .image, #my-services .image {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Add some margin to footer */
+    footer {
+        margin-top: 50px;
+        text-align: center;
+    }
+</style>
