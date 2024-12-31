@@ -1,260 +1,270 @@
-<style>
-    /* Reset some default styling */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Soft light background */
+    color: #333;
+    line-height: 1.6;
+    font-size: 17px; /* Slightly larger font for better readability */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for modern look */
+    color: white;
+    padding: 80px 20px; /* Increased padding for better visual balance */
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 3.5em;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+/* Use Flexbox for Navigation Layout */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; 
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active Link */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+/* Fade Text Animation */
+.fade-text {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Game Project Section */
+#game-project {
+    background-color: #e9ecef;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#game-project h2 {
+    font-size: 3.5em;
+    color: #343a40;
+    text-align: left;
+}
+
+#game-project p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.game-info .game-image {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.game-info .game-description {
+    max-width: 650px;
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #495057;
+}
+
+.download-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 18px 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* About My Work Section */
+#about-my-work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+#about-my-work .text {
+    width: 60%;
+}
+
+#about-my-work .image {
+    width: 35%;
+}
+
+/* About Me Section */
+#about-me {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+#about-me .text {
+    width: 60%;
+}
+
+#about-me .image {
+    width: 35%;
+}
+
+/* My Services Section */
+#my-services {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+#my-services .text {
+    width: 60%;
+}
+
+#my-services .image {
+    width: 35%;
+}
+
+/* Contact Me Section */
+#contact {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+/* Introduction Video */
+#introduction .video-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+#introduction video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about-my-work, #about-me, #my-services {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    /* General Layout */
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
+    #about-my-work .text, #about-my-work .image,
+    #about-me .text, #about-me .image,
+    #my-services .text, #my-services .image {
+        width: 80%;
     }
 
-    .container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    section {
-        padding: 50px 0;
-    }
-
-    h2 {
-        font-size: 2rem;
+    #about-my-work .image, #about-me .image, #my-services .image {
         margin-bottom: 20px;
     }
+}
 
-    /* Fade-in Effect */
-    .fade-text {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-
-    .fade-text.visible {
-        opacity: 1;
-    }
-
-    /* About My Work Section */
-    #about-my-work {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-    }
-
-    #about-my-work .text {
-        width: 60%;
-    }
-
-    #about-my-work .image {
-        width: 35%;
-    }
-
-    /* About Me Section */
-    #about-me {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-    }
-
-    #about-me .text {
-        width: 60%;
-    }
-
-    #about-me .image {
-        width: 35%;
-    }
-
-    /* My Services Section */
-    #my-services {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-    }
-
-    #my-services .text {
-        width: 60%;
-    }
-
-    #my-services .image {
-        width: 35%;
-    }
-
-    /* Contact Me Section */
-    #contact {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    /* Introduction Video */
-    #introduction .video-container {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        margin-top: 20px;
-    }
-
-    #introduction video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        #about-my-work, #about-me, #my-services {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        #about-my-work .text, #about-my-work .image,
-        #about-me .text, #about-me .image,
-        #my-services .text, #my-services .image {
-            width: 80%;
-        }
-
-        #about-my-work .image, #about-me .image, #my-services .image {
-            margin-bottom: 20px;
-        }
-    }
-
-    /* Add some margin to footer */
-    footer {
-        margin-top: 50px;
-        text-align: center;
-    }
-    
-    /* Global Styling for Navigation */
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    /* Add a hover effect for links in the nav */
-    nav ul li a:hover {
-        color: #007bff;
-    }
-
-    /* About Section */
-    #about {
-        padding: 50px 0;
-        background-color: #f4f4f4;
-    }
-
-    #about h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    #about .content {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    #about .content .text {
-        width: 60%;
-    }
-
-    #about .content .image {
-        width: 35%;
-    }
-
-    /* Services Section */
-    #services {
-        padding: 50px 0;
-    }
-
-    #services h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    #services .service-item {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    #services .service-item .text {
-        width: 60%;
-    }
-
-    #services .service-item .image {
-        width: 35%;
-    }
-
-    /* Contact Section */
-    #contact {
-        background-color: #007bff;
-        color: white;
-        padding: 50px 0;
-    }
-
-    #contact h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    #contact .form-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    #contact form {
-        width: 70%;
-        max-width: 600px;
-    }
-
-    #contact form input,
-    #contact form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-
-    #contact form button {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    #contact form button:hover {
-        background-color: #007bff;
-    }
-
-    /* Footer Section */
-    footer {
-        background-color: #333;
-        color: white;
-        padding: 20px 0;
-    }
-
-    footer p {
-        text-align: center;
-        margin: 0;
-    }
-</style>
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
