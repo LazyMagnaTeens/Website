@@ -8,149 +8,109 @@
 /* Body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Soft light background */
     color: #333;
     line-height: 1.6;
-    font-size: 17px;
+    font-size: 17px; /* Slightly larger font for better readability */
 }
 
 /* Container */
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center the container */
     padding: 0 15px;
 }
 
-/* Flex Sections */
+/* Section Styles */
 section {
     padding: 50px 0;
 }
 
-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #343a40;
-}
-
-section p {
-    font-size: 1.2em;
-    line-height: 1.7;
-    color: #495057;
-}
-
-/* Flex Layouts */
-#about-my-work,
-#about-me,
-#my-services {
+/* About My Work Section */
+#about-my-work {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    flex-direction: row; /* Text on the left, image on the right */
 }
 
-/* Adjust for Images and Text */
-.text {
+#about-my-work .text {
     width: 60%;
 }
 
-.image img {
-    width: 100%;
+#about-my-work .image {
+    width: 35%;
+    text-align: right;
+}
+
+#about-my-work .image img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Download Button */
-.download-btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 15px 25px;
-    font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+/* About Me Section */
+#about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Text on the right, image on the left */
 }
 
-.download-btn:hover {
-    background-color: #0056b3;
+#about-me .text {
+    width: 60%;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Stack elements vertically */
-    #about-my-work,
-    #about-me,
-    #my-services {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text, .image {
-        width: 100%;
-    }
-
-    /* Adjust font sizes */
-    section h2 {
-        font-size: 2em;
-    }
-
-    section p {
-        font-size: 1em;
-    }
-
-    /* Reduce button size */
-    .download-btn {
-        padding: 12px 20px;
-        font-size: 1em;
-    }
-
-    /* Video Container */
-    #introduction iframe {
-        height: 300px;
-    }
-
-    /* Game Info */
-    .game-info {
-        flex-direction: column; /* Stack image and text vertically */
-        gap: 30px;
-    }
-
-    .game-info .game-image, .game-info .game-description {
-        width: 100%;
-        text-align: center;
-    }
-
-    .game-info .game-description {
-        font-size: 1em;
-    }
+#about-me .image {
+    width: 35%;
+    text-align: left;
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 16px; /* Slightly smaller font for compact screens */
-    }
+#about-me .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    section h2 {
-        font-size: 1.8em;
-    }
+/* My Services Section */
+#my-services {
+    display: flex;
+    justify-content: flex-start; /* Aligns text to the left */
+}
 
-    .download-btn {
-        padding: 10px 15px;
-    }
+#my-services .text {
+    width: 100%;
+}
 
-    #introduction iframe {
-        height: 250px;
-    }
+#my-services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#my-services ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Fade Text Animation */
+.fade-text {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-text.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
-    font-size: 0.9em;
 }
