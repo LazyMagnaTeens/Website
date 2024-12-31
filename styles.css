@@ -157,10 +157,11 @@ nav ul li a.active {
 
 /* About Me Section */
 /* About Me Section */
+/* About Me Section */
 #about-me {
     display: flex; /* Flexbox layout */
     align-items: center; /* Vertically center the content */
-    justify-content: flex-start; /* Align the content to the left */
+    justify-content: flex-end; /* Align the content to the right */
     width: 100%; /* Ensure the section takes up the full width of the page */
     position: relative;
 }
@@ -168,13 +169,14 @@ nav ul li a.active {
 #about-me .container {
     display: flex;
     width: 100%;
-    justify-content: flex-start; /* Align the entire container content to the left */
-    padding-left: 20px; /* Add some padding to the left for spacing */
+    justify-content: flex-start; /* Keep image on the left */
 }
 
 #about-me .text {
-    width: 60%; /* Text will take up 60% of the container */
-    text-align: left; /* Align text to the left */
+    position: absolute; /* Position text on the right of the screen */
+    right: 0; /* Push text to the right side of the screen */
+    text-align: right; /* Align text to the right within its container */
+    width: 40%; /* Adjust text container width */
 }
 
 #about-me .image {
