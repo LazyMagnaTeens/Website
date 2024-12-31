@@ -227,6 +227,34 @@ nav ul li a.active {
     object-fit: contain; /* Ensure the image is not distorted */
 }
 
+/* Add border between specific sections */
+#introduction {
+    border-bottom: 2px solid #333; /* Border between Introduction and About My Work */
+    padding-bottom: 20px; /* Padding to avoid text touching the border */
+}
+
+#about-my-work {
+    border-bottom: 2px solid #333; /* Border between About My Work and About Me */
+    padding-bottom: 20px;
+}
+
+#about-me {
+    border-bottom: 2px solid #333; /* Border between About Me and My Services */
+    padding-bottom: 20px;
+}
+
+#my-services {
+    border-bottom: 2px solid #333; /* Border between My Services and Contact Me */
+    padding-bottom: 20px;
+}
+
+/* Optional: Padding between sections for a cleaner look */
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
 
 
 /* Footer */
