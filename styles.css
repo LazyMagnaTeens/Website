@@ -193,7 +193,7 @@ nav ul li a.active {
 
 #about-my-work .image {
     width: 10%; /* Sets the image width to 35% */
-    height: auto; /* Automatically adjusts the height to maintain the aspect ratio */
+    height: 100%; /* Automatically adjusts the height to maintain the aspect ratio */
     max-height: 10%; /* Ensures the image doesn't exceed the height of its container */
     object-fit: cover; /* Ensures the image covers the container proportionally */
     max-width: 60%; /* Ensures the image doesn't exceed the container's width */
