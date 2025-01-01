@@ -14,6 +14,13 @@ body {
     font-size: 17px; /* Slightly larger font for better readability */
 }
 
+section {
+    border: 1px solid #ddd; /* Dünne graue Linie */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -169,6 +176,17 @@ nav ul li a.active {
     margin-left: auto; /* Pushes the content fully to the right */
 }
 
+#image-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Helle Hintergrundfarbe */
+}
+#image-section img {
+    max-width: 100%;
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bildschatten */
+}
+
 #about-my-work .image {
     width: 35%; /* Adjust the width as needed */
     max-width: 100%; /* Prevents image from exceeding the container's width */
@@ -187,11 +205,12 @@ nav ul li a.active {
     width: 100%; /* Volle Breite des Containers */
 }
 
-#about-my-work .text {
-    width: 60%; /* Text nimmt 60% des Containers ein */
-    text-align: left; /* Text linksbündig */
-    line-height: 1.7; /* Bessere Lesbarkeit */
+#about-my-work .text, 
+#about-me .text, 
+#my-services .text {
+    font-size: 1.2em; /* Passe die Schriftgröße an */
 }
+
 
 #about-my-work .image {
     width: 35%; /* Bild nimmt 35% des Containers ein */
@@ -199,10 +218,6 @@ nav ul li a.active {
     height: auto; /* Beibehaltung des Seitenverhältnisses */
     object-fit: contain; /* Verhindert Verzerrung des Bildes */
 }
-
-
-
-
 
 
 /* Footer */
