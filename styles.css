@@ -195,15 +195,15 @@ nav ul li a.active {
 }
 
 
-/* About My Work Section */
 #about-my-work {
     display: flex;
     flex-direction: row; /* Bild rechts neben Text */
     align-items: flex-start; /* Elemente oben ausrichten */
     justify-content: space-between; /* Platz zwischen Text und Bild */
-    gap: 20px; /* Abstand zwischen Text und Bild */
+    gap: 40px; /* Erhöht den Abstand zwischen Text und Bild */
     width: 100%; /* Volle Breite des Containers */
 }
+
 
 #about-my-work .text, 
 #about-me .text, 
@@ -213,6 +213,7 @@ nav ul li a.active {
 
 
 #about-my-work .image {
+    margin-left: 20px; /* Erhöht den Abstand links vom Bild */
     width: 35%; /* Bild nimmt 35% des Containers ein */
     max-width: 100%; /* Bild passt sich an Containergröße an */
     height: auto; /* Beibehaltung des Seitenverhältnisses */
