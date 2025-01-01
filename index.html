@@ -6,132 +6,38 @@
     <title>Alien Wars Website</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Layout Styles */
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        section {
-            padding: 50px 0;
-        }
-
-        #about-my-work {
-            display: flex; /* Use flexbox to align items horizontally */
-            align-items: center; /* Vertically center the content */
-            justify-content: space-between; /* Ensure space between text and image */
-            gap: 20px; /* Space between text and image */
-        }
-
-        #about-my-work {
-            display: flex; /* Use flexbox to align items horizontally */
-            align-items: center; /* Vertically center the content */
-            justify-content: space-between; /* Ensure space between text and image */
-            gap: 20px; /* Space between text and image */
-        }
-
-        #about-my-work .text {
-            width: 60%; /* Text will take up 60% of the container */
-            text-align: left; /* Align text to the left */
-        }
-
-        #about-my-work .image {
-            width: 35%; /* Image will take up 35% of the container */
-        }
-
-        #about-my-work .image img {
-            width: 100%; /* Make sure the image fills the container */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the image is not distorted */
-        }
-
-        /* About Me Section */
-        /* About Me Section */
-#about-me {
-    display: flex; /* Use flexbox to align the text and image side by side */
-    flex-direction: row-reverse; /* This places the image on the right and the text on the left */
-    align-items: center; /* Vertically center the content */
-    justify-content: space-between; /* Ensures space between text and image */
-    gap: 20px; /* Add space between the text and the image */
-}
-
-#about-me .text {
-    width: 60%; /* Text takes up 60% of the container */
-    text-align: right; /* Align text to the right */
-}
-
-#about-me .image {
-    width: 35%; /* Image takes up 35% of the container */
-}
-
-#about-me .image img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image fits without distortion */
-}
-
-
-        /* My Services Section */
-#my-services {
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically center the content */
-    justify-content: space-between; /* Ensure space between text and image */
-    gap: 20px; /* Add some space between the text and image */
-}
-
-#my-services .text {
-    width: 60%; /* Text takes up 60% of the container */
-    text-align: left; /* Align text to the left */
-}
-
-#my-services .image {
-    width: 35%; /* Image takes up 35% of the container */
-}
-
-#my-services .image img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image is not distorted */
-}
-
-
-        /* Contact Me Section */
-        #contact {
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        /* Make video fit the entire introduction section */
-        #introduction .video-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        #introduction video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        /* Inline CSS code */
+        /* (Dein CSS ist im nächsten Abschnitt auch ausgelagert, wenn du es separat haben willst) */
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <h1>Alien Wars</h1>
+        <nav>
+            <ul>
+                <li><a href="#game-project">Game</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#about-my-work">About My Work</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#my-services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Game Project Section -->
     <section id="game-project">
-    <div class="container">
-        <h2>Alien Wars - The Game</h2>
-        <div class="game-info">
-            <img src="Asteroid.png" alt="Alien Wars Game Animation" class="game-image">
-            <div class="game-description">
-                <p class="fade-text">
-                    Alien Wars is an action-packed game where you control a spaceship to defend Earth from alien invaders. This game was coded in Python. The goal is to protect the planet by maintaining a high streak and earning the best score possible. Join the fight now!
-                </p>
-                <a href="https://drive.google.com/uc?export=download&id=19gpn_r_dLv5mRgC11pW1xqG-x-1gxzwK" class="download-btn fade-text" target="_blank">Download Alien Wars</a>
+        <div class="container">
+            <h2>Alien Wars - The Game</h2>
+            <div class="game-info">
+                <img src="Asteroid.png" alt="Alien Wars Game Animation" class="game-image">
+                <div class="game-description">
+                    <p>Alien Wars is an action-packed game where you control a spaceship to defend Earth from alien invaders. This game was coded in Python. The goal is to protect the planet by maintaining a high streak and earning the best score possible. Join the fight now!</p>
+                    <a href="https://drive.google.com/uc?export=download&id=19gpn_r_dLv5mRgC11pW1xqG-x-1gxzwK" class="download-btn" target="_blank">Download Alien Wars</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Introduction Section -->
     <section id="introduction">
@@ -139,61 +45,62 @@
             <h2>Introduction</h2>
             <p>Learn more about Alien Wars through this video introduction. It covers gameplay mechanics, story, and what makes it unique!</p>
             <div class="video-container">
-    <iframe 
-        src="https://drive.google.com/file/d/1gDgxKjQJAww5nbsakAAD3IzyvVCIIpqD/preview" 
-        width="100%" 
-        height="480" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
-</div>
-
+                <iframe 
+                    src="https://drive.google.com/file/d/1gDgxKjQJAww5nbsakAAD3IzyvVCIIpqD/preview" 
+                    width="100%" 
+                    height="480" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
-<!-- About My Work Section -->
-
-<section id="about-my-work">
-    <div class="container">
-        <div class="text fade-text">
-            <h2>About My Work</h2>
-            <p>Alien Wars is a game coded in Python. The game allows players to maneuver a spaceship as they defend Earth from invaders. It's a project that combines coding skills, game design, and creativity. I developed this game as a fun way to challenge players and develop my programming knowledge.</p>
+    <!-- About My Work Section -->
+    <section id="about-my-work">
+        <div class="container">
+            <div class="text">
+                <h2>About My Work</h2>
+                <p>Alien Wars is a game coded in Python. The game allows players to maneuver a spaceship as they defend Earth from invaders. It's a project that combines coding skills, game design, and creativity. I developed this game as a fun way to challenge players and develop my programming knowledge.</p>
+            </div>
+            <div class="image">
+                <img src="PythonCode.png" alt="About my work image">
+            </div>
         </div>
-        <div class="image fade-text">
-            <img src="PythonCode.png" alt="About my work image">
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="container">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am passionate about creating amazing web designs and user-friendly applications. My journey began with an interest in coding, and now I specialize in delivering high-quality projects tailored to client needs.</p>
         </div>
-    </div>
-</section>
-
-
-
-
-   <section id="about-me" class="container">
-    <div class="text">
-        <h2>About Me</h2>
-        <p>
-            I am passionate about creating amazing web designs and user-friendly applications. My journey began with an interest in coding, and now I specialize in delivering high-quality projects tailored to client needs.
-        </p>
-    </div>
-    <div class="image">
-        <img src="your-image-path.jpg" alt="About Me Image">
-    </div>
-</section>
+        <div class="image">
+            <img src="your-image-path.jpg" alt="About Me Image">
+        </div>
+    </section>
 
     <!-- My Services Section -->
     <section id="my-services">
-    <div class="container">
-        <div class="text fade-text">
-            <h2>My Services</h2>
-            <ul>
-                <li>Game Development</li>
-                <li>Game Design</li>
-                <li>Marketing</li>
-                <li>Business Strategy</li>
-            </ul>
+        <div class="container">
+            <div class="text">
+                <h2>My Services</h2>
+                <ul>
+                    <li>Game Development</li>
+                    <li>Game Design</li>
+                    <li>Marketing</li>
+                    <li>Business Strategy</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="FunnyImage.jpeg" alt="My services image">
+            </div>
         </div>
-        <div class="image fade-text">
-            <img src="FunnyImajpeg" alt="My services image">
-        </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Alien Wars. All rights reserved.</p>
+    </footer>
+</body>
+</html>
