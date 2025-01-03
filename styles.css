@@ -9,7 +9,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: gray; /* Soft light background */
-    color: white;
+    color: #333;
     line-height: 1.6;
     font-size: 17px; /* Slightly larger font for better readability */
 }
