@@ -72,7 +72,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em; 
+    font-size: 1.35em; 
     padding: 12px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -113,10 +113,11 @@ nav ul li a.active {
     font-size: 3.5em;
     color: #343a40;
     text-align: left;
+    margin-bottom: 20px; /* Space between heading and text */
 }
 
 #game-project p {
-    font-size: 1.3em;
+    font-size: 1.4em; /* Slightly larger font */
     line-height: 1.7;
     color: #495057;
     max-width: 850px;
@@ -208,7 +209,7 @@ nav ul li a.active {
 #about-my-work .text, 
 #about-me .text, 
 #my-services .text {
-    font-size: 1.2em; /* Passe die Schriftgröße an */
+    font-size: 1.35em; /* Passe die Schriftgröße an */
 }
 
 
