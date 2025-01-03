@@ -221,6 +221,34 @@ nav ul li a.active {
 }
 
 
+/* Updates Section */
+#updates {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 50px 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#updates h2 {
+    font-size: 2.5em;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+#updates ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Indentation for list items */
+    line-height: 1.8;
+    color: #495057; /* Text color */
+}
+
+#updates ul li {
+    font-size: 1.2em; /* Larger font for better readability */
+}
+
+
 /* Footer */
 footer {
     background-color: #333;
