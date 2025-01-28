@@ -31,14 +31,14 @@ section {
 
 /* Top Menu Styles */
 .top-menu {
-    position: fixed; /* Sticks the menu to the top-right */
-    top: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensures the menu stays on top */
+    position: fixed; /* Sticks the menu to a fixed position */
+    top: 10px; /* Adjusts the height (reduce value to move it up) */
+    right: 20px; /* Keeps it aligned to the top-right corner */
+    background: rgba(255, 255, 255, 0.9); /* Slight background for visibility */
+    padding: 10px 20px; /* Adds some padding */
+    border-radius: 10px; /* Makes edges round for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    z-index: 1000; /* Ensures it appears above other elements */
 }
 
 .top-menu ul {
