@@ -32,7 +32,7 @@ section {
 /* Top Menu Styles */
 .top-menu {
     position: fixed; /* Sticks the menu to a fixed position */
-    top: 5px; /* Adjusts the height (reduce value to move it up) */
+    top: 2.5px; /* Adjusts the height (reduce value to move it up) */
     right: 20px; /* Keeps it aligned to the top-right corner */
     background: rgba(255, 255, 255, 0.9); /* Slight background for visibility */
     padding: 10px 20px; /* Adds some padding */
