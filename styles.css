@@ -8,39 +8,52 @@
 /* Body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9; /* Soft light background */
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
-    font-size: 17px; /* Slightly larger font for better readability */
-}
-
-section {
-    border: 1px solid #ddd; /* Dünne graue Linie */
-    border-radius: 10px; /* Abgerundete Ecken */
-    padding: 20px; /* Innenabstand */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    font-size: 16px;
 }
 
 /* Container */
 .container {
-    width: 100%;
-    max-width: 1200px; /* Constrain the width */
-    margin: 0 auto; /* Center the container */
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
 /* Top Menu Styles */
 .top-menu {
-    position: fixed; /* Sticks the menu to a fixed position */
-    top: 2px; /* Adjusts the height (reduce value to move it up) */
-    right: 20px; /* Keeps it aligned to the top-right corner */
-    background: rgba(255, 255, 255, 0.9); /* Slight background for visibility */
-    padding: 10px 20px; /* Adds some padding */
-    border-radius: 10px; /* Makes edges round for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
-    z-index: 1000; /* Ensures it appears above other elements */
+    font-size: 0.95rem;
+    padding: 8px 16px;
 }
 
+/* Sections */
+section {
+    padding: 40px 0;
+}
+
+/* Responsive Flexbox Adjustments */
+#about-my-work .text, #about-me .text, #my-services .text {
+    width: 55%;
+}
+
+#about-my-work .image, #about-me .image, #my-services .image {
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    #about-my-work, #about-me, #my-services {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about-my-work .text, #about-me .text, #my-services .text,
+    #about-my-work .image, #about-me .image, #my-services .image {
+        width: 100%;
+    }
+}
 .top-menu ul {
     list-style: none;
     margin: 0;
