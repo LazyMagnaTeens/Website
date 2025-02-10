@@ -268,15 +268,16 @@ nav ul li a.active {
 }
 
 
-/* Updates Section */
 #updates {
-    background-color: #f4f4f4; /* Light background color */
+    background-color: #161b22; /* Ändere dies zu einem dunkleren Farbton */
     padding: 50px 20px;
     margin-top: 20px;
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border: 1px solid #30363d; /* Passe die Border-Farbe an */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    color: #c9d1d9; /* Stelle sicher, dass der Text hell genug ist */
 }
+
 
 #updates h2 {
     font-size: 2.5em;
