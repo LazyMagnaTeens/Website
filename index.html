@@ -150,6 +150,29 @@ nav ul li a.active {
     transform: translateY(0);
 }
 
+.flex-container {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Boxen */
+    flex-wrap: wrap; /* Falls nicht genug Platz ist, umbrechen */
+    justify-content: center; /* Zentriert die Boxen */
+}
+
+.flex-container .box {
+    flex: 1 1 300px; /* Gleiche Größe für alle Boxen, mind. 300px */
+    max-width: 350px; /* Maximale Breite */
+    height: 300px; /* Feste Höhe */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Inhalt gleichmäßig verteilen */
+    padding: 20px;
+    border: 1px solid #30363d;
+    background-color: #161b22;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
 /* Game Project Section */
 #game-project {
     background-color: #e9ecef;
